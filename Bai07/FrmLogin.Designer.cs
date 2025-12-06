@@ -107,6 +107,7 @@
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // lnkSigup
             // 
@@ -117,6 +118,7 @@
             this.lnkSigup.TabIndex = 7;
             this.lnkSigup.TabStop = true;
             this.lnkSigup.Text = "Chưa có tài khoản?Đăng ký";
+            this.lnkSigup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSigup_LinkClicked_1);
             // 
             // FrmLogin
             // 

@@ -1,15 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Bai07
 {
-    internal class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        [STAThread]
+        static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            // Chạy form đăng ký trước
+            using (var signup = new FrmLogin())
+            {
+                signup.ShowDialog(); // chờ đăng ký xong
+            }
+
+         
         }
     }
 }
