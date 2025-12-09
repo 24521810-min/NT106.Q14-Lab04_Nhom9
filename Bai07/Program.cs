@@ -11,13 +11,21 @@ namespace Bai07
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Chạy form đăng ký trước
-            using (var signup = new FrmLogin())
+            using (FrmLogin login = new FrmLogin())
             {
-                signup.ShowDialog(); // chờ đăng ký xong
-            }
+                // Nếu login đóng mà không đăng nhập thành công → thoát
+                if (login.ShowDialog() == DialogResult.OK)
+                {
+                    // Mở MainForm
+                    Application.Run(new FrmMain(Session.AccessToken));
 
-         
+                }
+                else
+                {
+                    // Nhấn X để đóng login → tắt app luôn
+                    Application.Exit();
+                }
+            }
         }
     }
 }

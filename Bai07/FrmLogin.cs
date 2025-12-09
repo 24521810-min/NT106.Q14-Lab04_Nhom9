@@ -35,12 +35,12 @@ namespace Bai07
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu.",
-                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
                 return;
             }
 
             btnLogin.Enabled = false;
+
             try
             {
                 var login = await ApiClient.LoginAsync(username, password);
@@ -48,9 +48,12 @@ namespace Bai07
                 Session.AccessToken = login.AccessToken;
                 Session.Username = username;
 
+
                 MessageBox.Show("Đăng nhập thành công!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                this.DialogResult = DialogResult.OK;  // ⭐ QUAN TRỌNG
+                this.Hide();
             }
             catch (Exception ex)
             {
@@ -62,6 +65,7 @@ namespace Bai07
                 btnLogin.Enabled = true;
             }
         }
+
 
         private void lblTitle_Click(object sender, EventArgs e)
         {
