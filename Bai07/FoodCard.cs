@@ -8,7 +8,10 @@ namespace Bai07
 {
     public partial class FoodCard : UserControl
     {
-        private MonAn _food; // món ăn hiện tại
+        // ==== SỰ KIỆN GỬI ID MÓN VỀ FrmMain ====
+        public event Action<int> OnDelete;
+
+        private MonAn _food;
 
         public FoodCard()
         {
@@ -16,11 +19,13 @@ namespace Bai07
 
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
 
-            // Gắn đúng sự kiện nút Xoá
+            // Gắn sự kiện nút Xoá
             btnxoa.Click += BtnXoa_Click;
         }
 
-        // ---------------- SET DATA ----------------
+        // ======================================================
+        // SET DATA
+        // ======================================================
         public void SetData(MonAn food)
         {
             _food = food;
@@ -33,7 +38,9 @@ namespace Bai07
             LoadImageAsync(food.HinhAnh);
         }
 
-        // ---------------- LOAD IMAGE ----------------
+        // ======================================================
+        // LOAD IMAGE ASYNC
+        // ======================================================
         private async void LoadImageAsync(string url)
         {
             if (string.IsNullOrWhiteSpace(url))
@@ -50,7 +57,6 @@ namespace Bai07
                         "Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
 
                     var bytes = await http.GetByteArrayAsync(url);
-
                     using (var ms = new MemoryStream(bytes))
                     {
                         pictureBox1.Image = Image.FromStream(ms);
@@ -63,8 +69,10 @@ namespace Bai07
             }
         }
 
-        // ---------------- DELETE BUTTON ----------------
-        private async void BtnXoa_Click(object sender, EventArgs e)
+        // ======================================================
+        // BUTTON XOÁ
+        // ======================================================
+        private void BtnXoa_Click(object sender, EventArgs e)
         {
             if (_food == null)
             {
@@ -75,26 +83,13 @@ namespace Bai07
             var confirm = MessageBox.Show(
                 "Bạn có chắc muốn xoá món này?",
                 "Xác nhận",
-                MessageBoxButtons.YesNo
-            );
+                MessageBoxButtons.YesNo);
 
-            if (confirm == DialogResult.No) return;
+            if (confirm == DialogResult.No)
+                return;
 
-            try
-            {
-                // GỌI API XOÁ
-                await ApiClient.DeleteFoodAsync(_food.Id, Session.AccessToken);
-
-                MessageBox.Show("Xoá thành công!");
-
-                // XOÁ CARD TRÊN UI
-                this.Parent.Controls.Remove(this);
-                this.Dispose();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi xoá món:\n" + ex.Message);
-            }
+            // Gọi sự kiện về FrmMain
+            OnDelete?.Invoke(_food.Id);
         }
     }
 }

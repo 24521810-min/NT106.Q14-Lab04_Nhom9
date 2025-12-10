@@ -106,7 +106,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FoodCard";
-            this.Size = new System.Drawing.Size(489, 351);
+            this.Size = new System.Drawing.Size(514, 351);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
