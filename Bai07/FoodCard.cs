@@ -8,10 +8,7 @@ namespace Bai07
 {
     public partial class FoodCard : UserControl
     {
-        private int _foodId;
-
-        // Event gửi ID món về FrmMain để xử lý xóa
-        public event Action<int> OnDelete;
+        private MonAn _food; // món ăn hiện tại
 
         public FoodCard()
         {
@@ -19,14 +16,14 @@ namespace Bai07
 
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
 
-            // Gắn sự kiện nút Xóa
-            btnxoa.Click += btnxoa_Click;
+            // Gắn đúng sự kiện nút Xoá
+            btnxoa.Click += BtnXoa_Click;
         }
 
         // ---------------- SET DATA ----------------
         public void SetData(MonAn food)
         {
-            Console.WriteLine(">>> ID nhận được: " + food.Id);
+            _food = food;
 
             label1.Text = "Tên món: " + food.TenMon;
             label3.Text = "Giá: " + food.Gia + "đ";
@@ -34,8 +31,6 @@ namespace Bai07
             label2.Text = "Người đăng: " + food.NguoiDang;
 
             LoadImageAsync(food.HinhAnh);
-
-            this.Tag = food.Id; // lưu ID để xoá
         }
 
         // ---------------- LOAD IMAGE ----------------
@@ -51,11 +46,11 @@ namespace Bai07
             {
                 using (HttpClient http = new HttpClient())
                 {
-                    // Giả lập user-agent để server cho download
                     http.DefaultRequestHeaders.Add("User-Agent",
                         "Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
 
                     var bytes = await http.GetByteArrayAsync(url);
+
                     using (var ms = new MemoryStream(bytes))
                     {
                         pictureBox1.Image = Image.FromStream(ms);
@@ -69,18 +64,36 @@ namespace Bai07
         }
 
         // ---------------- DELETE BUTTON ----------------
-        private void btnxoa_Click(object sender, EventArgs e)
+        private async void BtnXoa_Click(object sender, EventArgs e)
         {
+            if (_food == null)
+            {
+                MessageBox.Show("Không tìm thấy món để xoá!");
+                return;
+            }
+
             var confirm = MessageBox.Show(
                 "Bạn có chắc muốn xoá món này?",
-                "Xác nhận xoá",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
+                "Xác nhận",
+                MessageBoxButtons.YesNo
+            );
 
-            if (confirm == DialogResult.Yes)
+            if (confirm == DialogResult.No) return;
+
+            try
             {
-                // Gửi event cho FrmMain xử lý
-                OnDelete?.Invoke(_foodId);
+                // GỌI API XOÁ
+                await ApiClient.DeleteFoodAsync(_food.Id, Session.AccessToken);
+
+                MessageBox.Show("Xoá thành công!");
+
+                // XOÁ CARD TRÊN UI
+                this.Parent.Controls.Remove(this);
+                this.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi xoá món:\n" + ex.Message);
             }
         }
     }

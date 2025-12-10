@@ -48,14 +48,6 @@ namespace Bai07
                     var card = new FoodCard();
                     card.SetData(item);
 
-                    // ===================== THÊM XOÁ Ở ĐÂY =====================
-                    card.OnDelete += async (id) =>
-                    {
-                        await ApiClient.DeleteFoodAsync(id, _token);
-                        MessageBox.Show("Xóa món thành công!");
-                        await LoadALLFoods(); // reload danh sách
-                    };
-
                     flpAllFoods.Controls.Add(card);
                 }
             }
@@ -78,14 +70,6 @@ namespace Bai07
                 {
                     var card = new FoodCard();
                     card.SetData(item);
-
-                    // ===================== THÊM XOÁ Ở ĐÂY =====================
-                    card.OnDelete += async (id) =>
-                    {
-                        await ApiClient.DeleteFoodAsync(id, _token);
-                        MessageBox.Show("Xóa món thành công!");
-                        await LoadMyFoods(); // reload danh sách của tôi
-                    };
 
                     flpMyFoods.Controls.Add(card);
                 }

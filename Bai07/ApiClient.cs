@@ -122,12 +122,13 @@ namespace Bai07
         {
             SetAuth(token);
 
-            var res = await _client.DeleteAsync($"/api/v1/mon-an/{id}");
+            var res = await _client.DeleteAsync($"/api/v1/monan/{id}");
             var msg = await res.Content.ReadAsStringAsync();
 
             if (!res.IsSuccessStatusCode)
                 throw new Exception("Xóa món thất bại:\n" + msg);
         }
+
 
 
         // ---------------- PRIVATE AUTH ----------------
