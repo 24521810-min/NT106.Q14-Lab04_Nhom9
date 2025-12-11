@@ -77,7 +77,7 @@
             this.btnThemMon.TabIndex = 2;
             this.btnThemMon.Text = "Thêm món ăn";
             this.btnThemMon.UseVisualStyleBackColor = false;
-            this.btnThemMon.Click += new System.EventHandler(this.btnThemMon_Click);
+            this.btnThemMon.Click += new System.EventHandler(this.btnThemMon_Click_1);
             // 
             // btnAnGiGio
             // 
