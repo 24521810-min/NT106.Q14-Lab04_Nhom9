@@ -34,6 +34,7 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             btnxacnhan = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // lblnhap
@@ -90,11 +91,22 @@
             btnxacnhan.Text = "Xác nhận";
             btnxacnhan.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(34, 215);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 6;
+            button1.Text = "Chọn ghế";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // In4KhachHang
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(411, 359);
+            Controls.Add(button1);
             Controls.Add(btnxacnhan);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -115,5 +127,6 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Button btnxacnhan;
+        private Button button1;
     }
 }

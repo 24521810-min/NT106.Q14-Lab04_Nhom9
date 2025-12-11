@@ -99,15 +99,20 @@ namespace BAI04
 
             if (f.ShowDialog() == DialogResult.OK)
             {
+                // LẤY GHẾ ĐÃ CHỌN
+                string seat = f.SelectedSeat;
+
                 MessageBox.Show(
                     $"Khách hàng: {f.CustomerName}\n" +
                     $"SĐT: {f.CustomerPhone}\n" +
                     $"Phim: {lblName.Text}\n" +
+                    $"Ghế: {seat}\n" +                // ⭐ THÊM DÒNG NÀY ⭐
                     $"Giá vé: 75.000đ\n\n" +
                     "Đặt vé thành công!",
                     "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
                 );
             }
         }
+
     }
 }
