@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.webView2 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.btnGo = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
             this.btnDownHtml = new System.Windows.Forms.Button();
             this.btnDownResources = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // webView21
+            // webView2
             // 
-            this.webView21.AllowExternalDrop = true;
-            this.webView21.CreationProperties = null;
-            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Location = new System.Drawing.Point(12, 129);
-            this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(813, 355);
-            this.webView21.TabIndex = 0;
-            this.webView21.ZoomFactor = 1D;
+            this.webView2.AllowExternalDrop = true;
+            this.webView2.CreationProperties = null;
+            this.webView2.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView2.Location = new System.Drawing.Point(12, 129);
+            this.webView2.Name = "webView2";
+            this.webView2.Size = new System.Drawing.Size(813, 355);
+            this.webView2.TabIndex = 0;
+            this.webView2.ZoomFactor = 1D;
             // 
             // txtUrl
             // 
@@ -103,10 +103,10 @@
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.btnGo);
             this.Controls.Add(this.txtUrl);
-            this.Controls.Add(this.webView21);
+            this.Controls.Add(this.webView2);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,7 +114,7 @@
 
         #endregion
 
-        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView2;
         private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.Button btnGo;
         private System.Windows.Forms.Button btnReload;

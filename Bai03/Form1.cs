@@ -61,7 +61,7 @@ namespace Bai03
         {
             try
             {
-                await webView21.EnsureCoreWebView2Async(null);
+                await webView2.EnsureCoreWebView2Async(null);
                 txtUrl.Text = "https://uit.edu.vn";
             }
             catch (Exception ex)
@@ -78,7 +78,7 @@ namespace Bai03
                 string url = NormalizeUrl(txtUrl.Text);
                 txtUrl.Text = url; 
 
-                webView21.Source = new Uri(url);
+                webView2.Source = new Uri(url);
             }
             catch (Exception ex)
             {
@@ -91,9 +91,9 @@ namespace Bai03
         {
             try
             {
-                if (webView21.CoreWebView2 != null)
+                if (webView2.CoreWebView2 != null)
                 {
-                    webView21.CoreWebView2.Reload();
+                    webView2.CoreWebView2.Reload();
                 }
             }
             catch (Exception ex)
