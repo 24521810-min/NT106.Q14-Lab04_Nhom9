@@ -16,7 +16,7 @@ namespace Bai07
             _token = token;
 
             // Gắn sự kiện giao diện
-            btnThemMon.Click += btnThemMon_Click_1;
+            btnThemMon.Click += btnThemMon_Click;
             btnAnGiGio.Click += btnAnGiGio_Click_1;
             tslLogout.Click += tslLogout_Click_1;
             tabFoods.SelectedIndexChanged += tabFoods_SelectedIndexChanged;
