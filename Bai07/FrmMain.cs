@@ -238,7 +238,7 @@ namespace Bai07
         }
 
         // ======================= ADD FOOD =======================
-        private async void btnThemMon_Click(object sender, EventArgs e)
+        private async void btnThemMon_Click_1(object sender, EventArgs e)
         {
             using (var f = new FrmAddFood(_token))
             {
@@ -256,11 +256,6 @@ namespace Bai07
             Session.AccessToken = "";
             Session.Username = "";
             this.Close();
-        }
-
-        private void btnThemMon_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }
