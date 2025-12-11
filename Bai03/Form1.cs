@@ -202,5 +202,10 @@ namespace Bai03
                 MessageBox.Show("Lỗi tải resource: " + ex.Message);
             }
         }
+
+        private void btnGo_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

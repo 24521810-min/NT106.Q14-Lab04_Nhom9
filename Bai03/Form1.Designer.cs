@@ -63,6 +63,7 @@
             this.btnGo.TabIndex = 2;
             this.btnGo.Text = "Load";
             this.btnGo.UseVisualStyleBackColor = true;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click_1);
             // 
             // btnReload
             // 
