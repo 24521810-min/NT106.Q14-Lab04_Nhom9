@@ -22,7 +22,6 @@ namespace Bai07
                 }
                 else
                 {
-                    // Nhấn X để đóng login → tắt app luôn
                     Application.Exit();
                 }
             }

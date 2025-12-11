@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.btnAnGiGio = new System.Windows.Forms.Button();
             this.btnThemMon = new System.Windows.Forms.Button();
+            this.btnAnGiGio = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.tabFoods = new System.Windows.Forms.TabControl();
             this.tabAll = new System.Windows.Forms.TabPage();
-            this.tabMine = new System.Windows.Forms.TabPage();
             this.flpAllFoods = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabMine = new System.Windows.Forms.TabPage();
             this.flpMyFoods = new System.Windows.Forms.FlowLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblWelcome = new System.Windows.Forms.ToolStripStatusLabel();
             this.tslLogout = new System.Windows.Forms.ToolStripStatusLabel();
             this.panelPaging = new System.Windows.Forms.Panel();
-            this.lblPageText = new System.Windows.Forms.Label();
-            this.numPage = new System.Windows.Forms.NumericUpDown();
-            this.lblPageSizeText = new System.Windows.Forms.Label();
             this.numPageSize = new System.Windows.Forms.NumericUpDown();
+            this.lblPageSizeText = new System.Windows.Forms.Label();
+            this.numPage = new System.Windows.Forms.NumericUpDown();
+            this.lblPageText = new System.Windows.Forms.Label();
             this.panelHeader.SuspendLayout();
             this.tabFoods.SuspendLayout();
             this.tabAll.SuspendLayout();
             this.tabMine.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panelPaging.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPageSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPage)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHeader
@@ -65,17 +65,17 @@
             this.panelHeader.Size = new System.Drawing.Size(759, 106);
             this.panelHeader.TabIndex = 0;
             // 
-            // lblTitle
+            // btnThemMon
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblTitle.Location = new System.Drawing.Point(3, 10);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(239, 37);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "HÔM NAY ĂN GÌ?";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnThemMon.BackColor = System.Drawing.SystemColors.Info;
+            this.btnThemMon.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemMon.Location = new System.Drawing.Point(562, 34);
+            this.btnThemMon.Name = "btnThemMon";
+            this.btnThemMon.Size = new System.Drawing.Size(190, 58);
+            this.btnThemMon.TabIndex = 2;
+            this.btnThemMon.Text = "Thêm món ăn";
+            this.btnThemMon.UseVisualStyleBackColor = false;
+            this.btnThemMon.Click += new System.EventHandler(this.btnThemMon_Click_1);
             // 
             // btnAnGiGio
             // 
@@ -88,16 +88,17 @@
             this.btnAnGiGio.Text = "Ăn gì giờ?";
             this.btnAnGiGio.UseVisualStyleBackColor = false;
             // 
-            // btnThemMon
+            // lblTitle
             // 
-            this.btnThemMon.BackColor = System.Drawing.SystemColors.Info;
-            this.btnThemMon.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemMon.Location = new System.Drawing.Point(562, 34);
-            this.btnThemMon.Name = "btnThemMon";
-            this.btnThemMon.Size = new System.Drawing.Size(190, 58);
-            this.btnThemMon.TabIndex = 2;
-            this.btnThemMon.Text = "Thêm món ăn";
-            this.btnThemMon.UseVisualStyleBackColor = false;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblTitle.Location = new System.Drawing.Point(3, 10);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(239, 37);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "HÔM NAY ĂN GÌ?";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabFoods
             // 
@@ -120,6 +121,14 @@
             this.tabAll.Text = "All";
             this.tabAll.UseVisualStyleBackColor = true;
             // 
+            // flpAllFoods
+            // 
+            this.flpAllFoods.AutoScroll = true;
+            this.flpAllFoods.Location = new System.Drawing.Point(6, 6);
+            this.flpAllFoods.Name = "flpAllFoods";
+            this.flpAllFoods.Size = new System.Drawing.Size(728, 443);
+            this.flpAllFoods.TabIndex = 0;
+            // 
             // tabMine
             // 
             this.tabMine.Controls.Add(this.flpMyFoods);
@@ -130,14 +139,6 @@
             this.tabMine.TabIndex = 1;
             this.tabMine.Text = "Tôi đóng góp";
             this.tabMine.UseVisualStyleBackColor = true;
-            // 
-            // flpAllFoods
-            // 
-            this.flpAllFoods.AutoScroll = true;
-            this.flpAllFoods.Location = new System.Drawing.Point(6, 6);
-            this.flpAllFoods.Name = "flpAllFoods";
-            this.flpAllFoods.Size = new System.Drawing.Size(728, 443);
-            this.flpAllFoods.TabIndex = 0;
             // 
             // flpMyFoods
             // 
@@ -183,14 +184,31 @@
             this.panelPaging.Size = new System.Drawing.Size(776, 46);
             this.panelPaging.TabIndex = 3;
             // 
-            // lblPageText
+            // numPageSize
             // 
-            this.lblPageText.AutoSize = true;
-            this.lblPageText.Location = new System.Drawing.Point(330, 12);
-            this.lblPageText.Name = "lblPageText";
-            this.lblPageText.Size = new System.Drawing.Size(62, 25);
-            this.lblPageText.TabIndex = 0;
-            this.lblPageText.Text = "Page";
+            this.numPageSize.Location = new System.Drawing.Point(637, 6);
+            this.numPageSize.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPageSize.Name = "numPageSize";
+            this.numPageSize.Size = new System.Drawing.Size(120, 31);
+            this.numPageSize.TabIndex = 3;
+            this.numPageSize.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblPageSizeText
+            // 
+            this.lblPageSizeText.AutoSize = true;
+            this.lblPageSizeText.Location = new System.Drawing.Point(524, 8);
+            this.lblPageSizeText.Name = "lblPageSizeText";
+            this.lblPageSizeText.Size = new System.Drawing.Size(107, 25);
+            this.lblPageSizeText.TabIndex = 2;
+            this.lblPageSizeText.Text = "Page size";
             // 
             // numPage
             // 
@@ -209,31 +227,14 @@
             0,
             0});
             // 
-            // lblPageSizeText
+            // lblPageText
             // 
-            this.lblPageSizeText.AutoSize = true;
-            this.lblPageSizeText.Location = new System.Drawing.Point(524, 8);
-            this.lblPageSizeText.Name = "lblPageSizeText";
-            this.lblPageSizeText.Size = new System.Drawing.Size(107, 25);
-            this.lblPageSizeText.TabIndex = 2;
-            this.lblPageSizeText.Text = "Page size";
-            // 
-            // numPageSize
-            // 
-            this.numPageSize.Location = new System.Drawing.Point(637, 6);
-            this.numPageSize.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numPageSize.Name = "numPageSize";
-            this.numPageSize.Size = new System.Drawing.Size(120, 31);
-            this.numPageSize.TabIndex = 3;
-            this.numPageSize.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.lblPageText.AutoSize = true;
+            this.lblPageText.Location = new System.Drawing.Point(330, 12);
+            this.lblPageText.Name = "lblPageText";
+            this.lblPageText.Size = new System.Drawing.Size(62, 25);
+            this.lblPageText.TabIndex = 0;
+            this.lblPageText.Text = "Page";
             // 
             // FrmMain
             // 
@@ -256,8 +257,8 @@
             this.statusStrip1.PerformLayout();
             this.panelPaging.ResumeLayout(false);
             this.panelPaging.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPageSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

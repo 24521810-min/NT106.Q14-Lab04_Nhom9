@@ -124,6 +124,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRandomFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRandomFood.Designer.cs">
+      <DependentUpon>FrmRandomFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSignup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRandomFood.resx">
+      <DependentUpon>FrmRandomFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSignup.resx">
       <DependentUpon>FrmSignup.cs</DependentUpon>
