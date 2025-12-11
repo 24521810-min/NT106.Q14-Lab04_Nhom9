@@ -48,9 +48,10 @@
             this.lblAddTitle.AutoSize = true;
             this.lblAddTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddTitle.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblAddTitle.Location = new System.Drawing.Point(268, 9);
+            this.lblAddTitle.Location = new System.Drawing.Point(179, 6);
+            this.lblAddTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddTitle.Name = "lblAddTitle";
-            this.lblAddTitle.Size = new System.Drawing.Size(258, 45);
+            this.lblAddTitle.Size = new System.Drawing.Size(161, 28);
             this.lblAddTitle.TabIndex = 0;
             this.lblAddTitle.Text = "THÊM MÓN ĂN";
             // 
@@ -58,9 +59,10 @@
             // 
             this.lblFoodName.AutoSize = true;
             this.lblFoodName.Font = new System.Drawing.Font("Segoe UI Semibold", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodName.Location = new System.Drawing.Point(21, 64);
+            this.lblFoodName.Location = new System.Drawing.Point(14, 41);
+            this.lblFoodName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFoodName.Name = "lblFoodName";
-            this.lblFoodName.Size = new System.Drawing.Size(130, 30);
+            this.lblFoodName.Size = new System.Drawing.Size(85, 19);
             this.lblFoodName.TabIndex = 1;
             this.lblFoodName.Text = "Tên món ăn:";
             // 
@@ -68,9 +70,10 @@
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(102, 106);
+            this.lblPrice.Location = new System.Drawing.Point(68, 68);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(49, 30);
+            this.lblPrice.Size = new System.Drawing.Size(33, 19);
             this.lblPrice.TabIndex = 2;
             this.lblPrice.Text = "Giá:";
             // 
@@ -78,9 +81,10 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(69, 155);
+            this.lblAddress.Location = new System.Drawing.Point(46, 99);
+            this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(82, 30);
+            this.lblAddress.Size = new System.Drawing.Size(56, 19);
             this.lblAddress.TabIndex = 3;
             this.lblAddress.Text = "Địa chỉ:";
             // 
@@ -88,9 +92,10 @@
             // 
             this.lblImage.AutoSize = true;
             this.lblImage.Font = new System.Drawing.Font("Segoe UI Semibold", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImage.Location = new System.Drawing.Point(49, 214);
+            this.lblImage.Location = new System.Drawing.Point(33, 137);
+            this.lblImage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblImage.Name = "lblImage";
-            this.lblImage.Size = new System.Drawing.Size(103, 30);
+            this.lblImage.Size = new System.Drawing.Size(69, 19);
             this.lblImage.TabIndex = 4;
             this.lblImage.Text = "Hình ảnh:";
             // 
@@ -98,55 +103,63 @@
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(81, 270);
+            this.lblDescription.Location = new System.Drawing.Point(54, 173);
+            this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(75, 30);
+            this.lblDescription.Size = new System.Drawing.Size(49, 19);
             this.lblDescription.TabIndex = 5;
             this.lblDescription.Text = "Mô tả:";
             // 
             // txtFoodName
             // 
-            this.txtFoodName.Location = new System.Drawing.Point(159, 61);
+            this.txtFoodName.Location = new System.Drawing.Point(106, 39);
+            this.txtFoodName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFoodName.Name = "txtFoodName";
-            this.txtFoodName.Size = new System.Drawing.Size(597, 31);
+            this.txtFoodName.Size = new System.Drawing.Size(399, 22);
             this.txtFoodName.TabIndex = 6;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(159, 106);
+            this.txtPrice.Location = new System.Drawing.Point(106, 68);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(597, 31);
+            this.txtPrice.Size = new System.Drawing.Size(399, 22);
             this.txtPrice.TabIndex = 7;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(159, 155);
+            this.txtAddress.Location = new System.Drawing.Point(106, 99);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(597, 31);
+            this.txtAddress.Size = new System.Drawing.Size(399, 22);
             this.txtAddress.TabIndex = 8;
             // 
             // txtImageUrl
             // 
-            this.txtImageUrl.Location = new System.Drawing.Point(159, 211);
+            this.txtImageUrl.Location = new System.Drawing.Point(106, 135);
+            this.txtImageUrl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtImageUrl.Name = "txtImageUrl";
-            this.txtImageUrl.Size = new System.Drawing.Size(597, 31);
+            this.txtImageUrl.Size = new System.Drawing.Size(399, 22);
             this.txtImageUrl.TabIndex = 9;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(159, 264);
+            this.txtDescription.Location = new System.Drawing.Point(106, 169);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(597, 160);
+            this.txtDescription.Size = new System.Drawing.Size(399, 104);
             this.txtDescription.TabIndex = 10;
+           
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(405, 431);
+            this.btnClear.Location = new System.Drawing.Point(270, 276);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(180, 64);
+            this.btnClear.Size = new System.Drawing.Size(120, 41);
             this.btnClear.TabIndex = 11;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -155,18 +168,19 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(591, 431);
+            this.btnAdd.Location = new System.Drawing.Point(394, 276);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(180, 64);
+            this.btnAdd.Size = new System.Drawing.Size(120, 41);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // FrmAddFood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 507);
+            this.ClientSize = new System.Drawing.Size(533, 324);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtDescription);
@@ -181,6 +195,7 @@
             this.Controls.Add(this.lblFoodName);
             this.Controls.Add(this.lblAddTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FrmAddFood";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

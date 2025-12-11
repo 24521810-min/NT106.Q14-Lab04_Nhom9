@@ -12,8 +12,7 @@ namespace Bai07
         {
             InitializeComponent();
 
-            btnSubmit.Click += btnSubmit_Click_1;
-            btnClear.Click += btnClear_Click_1;
+          
 
             if (cboLanguage.Items.Count > 0)
                 cboLanguage.SelectedIndex = 0;  
